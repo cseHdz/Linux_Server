@@ -36,10 +36,11 @@ The following packages were installed through `sudo apt-get install`
 
 ### 2. Security
 1. Enable ports 2200, 80, and 123 in Azure.
-2. Change SSH port to 2200 and disable password based authentication by running:
+2. Change SSH port to 2200, disable password based authentication, and disable remote login by root by running:
    - `sudo nano /etc/ssh/sshd_config`
    - Change the port to `Port 2200`
    - Change `PasswordAutherntication` to `no`
+   - Change `Permit
 3. Configure Uncomplicated Firewall:
    - `sudo ufw default deny incoming`
    - `sudo ufw default allow outgoing`
