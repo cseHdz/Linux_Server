@@ -24,13 +24,15 @@ On deployment the machine was upgrade through:
 - `sudo apt-get update`
 - `sudo apt-get upgrade`
 
-The following configurations were performed on the server:
+The following configurations were performed on the server:  
+Timezone was upgraded thorugh `sudo dpkg-reconfigure tzdata`. Select None of the Above. Select UTC.
 
 ### 1. Packages
 The following packages were installed through `sudo apt-get install`
 - Apache: `apache2`
 - WSGI: `libapache2-mod-wsgi`
 - PostgreSQL: `postgresql`
+- Git: `git`
 
 ### 2. Security
 1. Enable ports 2200, 80, and 123 in Azure.
@@ -57,3 +59,5 @@ The following packages were installed through `sudo apt-get install`
 4. Secure the directories with the RSA Keys:
     - `sudo chmod 700 .ssh` (Only user can read, write, execute)
     - `sudo chmod 644 .ssh/authorized_keys` (Use can read and write, others can only read)
+    
+### 4. Item Catalog Application
