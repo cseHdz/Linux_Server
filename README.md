@@ -75,8 +75,8 @@ The following packages were installed through `sudo apt-get install`
 
 ### 5. WSGI Setup
 1. Modify the default site through `sudo nano /etc/apache2/sites-enabled/000-default.conf`
-2. Enter the following code after the first set of commentary:
-   `ServerName eo-u1604-vm3.southcentralus.cloudapp.azure.com
+2. Enter the following code after the first set of commentary:  
+   ```ServerName eo-u1604-vm3.southcentralus.cloudapp.azure.com
     WSGIScriptAlias / /var/www/html/Item_Catalog/app_WSGI.wsgi
     <Directory /var/www/html/Item_Catalog/Item_Catalog/>
       Allow from all
@@ -88,7 +88,7 @@ The following packages were installed through `sudo apt-get install`
    <Directory /var/www/html/Item_Catalog/Item_Catalog/static/>
           Allow from all
           Order deny,allow
-   </Directory>`
+   </Directory>```
 3. Restart apache `sudo apache2ctl restart`
 
 ### 6. Item Catalog Application
