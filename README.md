@@ -27,10 +27,10 @@ Timezone was upgraded thorugh `sudo dpkg-reconfigure tzdata`. Select None of the
 ### 1. Packages
 The following packages were installed through `sudo apt-get install`
 - Apache: `apache2`
-- WSGI: `libapache2-mod-wsgi-py3`
+- WSGI: `libapache2-mod-wsgi`
 - PostgreSQL: `postgresql`
 - Git: `git`
-- Pip3: `python3-pip`
+- Pip: `pip`
 
 ### 2. Security
 1. Enable ports 2200, 80, and 123 in Azure.
@@ -67,8 +67,8 @@ The following packages were installed through `sudo apt-get install`
 2. Login to the database `psql -d catalog`
 3. Add new users *www-data* and *www* to ensure psycop2g compatibility `createuser username`
 4. Grant permissions to new user for CRUD operations
-   - `GRANT SELECT, INSERT, DELETE,UPDATE ON category to "www-data";`
-   - `GRANT SELECT, INSERT, DELETE,UPDATE ON category to "www";`
+   - `GRANT SELECT, INSERT, DELETE, UPDATE ON category to "www-data";`
+   - `GRANT SELECT, INSERT, DELETE, UPDATE ON category to "www";`
 5. Exit the database with `\q`
 
 ### 5. WSGI Setup
@@ -94,7 +94,7 @@ The following packages were installed through `sudo apt-get install`
 2. Initialize git on the folder `sudo git init`
 3. Clone GitHub repository for Item_Catalog `sudo git clone https://github.com/cseHdz/Item_Catalog.git`
 4. The app is located in the local_flask branch `sudo git reset --hard origin/local_flask`
-5. The following packages were installed through `sudo -H pip3 install`
+5. The following packages were installed through `sudo -H pip install`
    - Flask `Flask`
    - SQLAlchemy `sqlalchemy`
    - Psycopg2 `psycopg2`
