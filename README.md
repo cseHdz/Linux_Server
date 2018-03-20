@@ -65,12 +65,10 @@ The following packages were installed through `sudo apt-get install`
    - Setup:`python /var/www/html/Item_Catalog/Item_Catalog/database_setup.py`
    - Initialize:`python /var/www/html/Item_Catalog/Item_Catalog/initialize_database.py`
 2. Login to the database `psql -d catalog`
-3. Add new user *www-data* to ensure psycop2g compatibility `createuser www-data`
+3. Add new users *www-data* and *www* to ensure psycop2g compatibility `createuser username`
 4. Grant permissions to new user for CRUD operations
-   - `GRANT SELECT ON category to "www-data"`
-   - `GRANT INSERT ON category_item to "www-data"`
-   - `GRANT DELETE ON "user" to "www-data"`
-   - `GRANT UPDATE ON "user" to "www-data"`
+   - `GRANT SELECT, INSERT, DELETE,UPDATE ON category to "www-data";`
+   - `GRANT SELECT, INSERT, DELETE,UPDATE ON category to "www";`
 5. Exit the database with `\q`
 
 ### 5. WSGI Setup
