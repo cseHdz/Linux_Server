@@ -8,7 +8,7 @@ Terminal Client to Run SSH into Linux.
 URL: http://eo-u1604-vm3.southcentralus.cloudapp.azure.com  
 IP Address: 13.84.186.157
 
-Connection: `ssh grader@13.84.186.157 -p 2200 -i /location_of_rsa_key`
+Connection: `ssh grader@13.84.186.157 -p 2200 -i /location_of_rsa_key`  
 User: grader
 
 ## Project Overview
