@@ -24,7 +24,7 @@ On deployment the machine was upgrade through:
 The following configurations were performed on the server:  
 Timezone was upgraded thorugh `sudo dpkg-reconfigure tzdata`. Select None of the Above. Select UTC.
 
-### 1. Packages
+### 1. Syatem Packages
 The following packages were installed through `sudo apt-get install`
 - Apache: `apache2`
 - WSGI: `libapache2-mod-wsgi`
@@ -99,3 +99,6 @@ The following packages were installed through `sudo apt-get install`
    - SQLAlchemy `sqlalchemy`
    - Psycopg2 `psycopg2`
    - oauth2client `oauth2client`
+   - httplib2 `httplib2`
+   - requests `requests`
+6. For system packages please refer to Section 1.
