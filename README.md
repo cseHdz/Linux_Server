@@ -24,7 +24,7 @@ On deployment the machine was upgrade through:
 The following configurations were performed on the server:  
 Timezone was upgraded thorugh `sudo dpkg-reconfigure tzdata`. Select None of the Above. Select UTC.
 
-### 1. Syatem Packages
+### 1. System Packages
 The following packages were installed through `sudo apt-get install`
 - Apache: `apache2`
 - WSGI: `libapache2-mod-wsgi`
